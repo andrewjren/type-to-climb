@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://4xmmxxpw1nuc"]
+
+[ext_resource type="Script" path="res://scripts/game_data.gd" id="1_bca5k"]
+
+[node name="GameData" type="RichTextLabel"]
+offset_right = 175.0
+offset_bottom = 25.0
+text = "Score:"
+script = ExtResource("1_bca5k")

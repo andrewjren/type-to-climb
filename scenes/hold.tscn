@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://byqrfpi8treck"]
+
+[ext_resource type="Texture2D" uid="uid://cosn2k4ewbrtq" path="res://assets/holds.png" id="1_lyvgv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_p0ga0"]
+radius = 3.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q6dvx"]
+atlas = ExtResource("1_lyvgv")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nwg51"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q6dvx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Hold" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -2)
+shape = SubResource("CircleShape2D_p0ga0")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_nwg51")
